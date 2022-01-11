@@ -1,0 +1,8 @@
+data-directory/*
+!data-directory/dataset/
+!data-directory/graph/
+!data-directory/model-data/
+data-directory/model-data/*
+!data-directory/model-data/.gitignore
+app/src/structured_data_regressor
+

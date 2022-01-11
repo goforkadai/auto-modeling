@@ -1,0 +1,14 @@
+services:
+  test:
+    build: ./Dockerfiles/autokeras
+    container_name: autokeras-container
+    volumes:
+      - ./:/var/www:z
+    working_dir: /var/www
+      #command: /bin/bash -c "cd /var/www/app && pipenv install && /bin/bash"
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
