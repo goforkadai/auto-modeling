@@ -23,7 +23,7 @@ df_test_x = df_test.filter(like='x')
 df_test_y = df_test.drop(columns=df_test_x.columns)
 
 
-clf = ak.StructuredDataRegressor(max_trials=100)
+clf = ak.StructuredDataRegressor(max_trials=7)
 
 callbacks = [tf.keras.callbacks.EarlyStopping(patience=30, restore_best_weights=True)]
 clf.fit(df_train_x,df_train_y,callbacks = callbacks)
